@@ -1,8 +1,87 @@
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<input id="this" value="someVal" />
-<script>
-$(document).ready(function(){
-var test = $('#this').attr('value');
-alert(test);
-});
-</script>
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Backbone.js example</title>
+	<link rel="stylesheet" type="text/css" href="css/sunny/jqueryui.min.css"/>
+</head>
+<body>
+	<!-- "slider" is a jquery slider -->
+	<div id="slider"></div>
+	
+	<!-- "sliderVal" displays the slider's position. It receives the value via model. -->
+	<input type="text" id="sliderVal" value="0"/>
+ 
+	<script type="text/javascript" language="Javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" language="Javascript" src="js/underscore-min.js"></script>
+	<script type="text/javascript" language="Javascript" src="js/backbone-min.js"></script>
+	<script type="text/javascript" language="Javascript" src="js/jquery-ui-1.8.14.custom.min.js"></script>
+	<script type="text/javascript" language="Javascript" src="js/myapp.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// Initialize jquery slider
+			$("#slider").slider();
+			
+			// Create the model class via Backbone (which sets up things like prototype objects correctly). 
+			// This particular model is a very simple one. It'll have just 1 attribute - "slidervalue"
+			var SliderModel = Backbone.Model.extend({});
+			
+			// A "View" abstraction for the slider.
+			// Whenever the slider position changes, this view updates the model with the new value.
+			var SliderView = Backbone.View.extend({
+				el : $("#slider"), // Specifies the DOM element which this view handles
+				
+				events : {
+					// Call the event handler "updateVal" when slider value changes.
+					// 'slidechange' is the jquery slider widget's event type. 
+					// Refer http://jqueryui.com/demos/slider/#default for information about 'slidechange'.
+					"slidechange" : "updateVal"  
+				},
+				
+				updateVal : function() {
+					// Get slider value and set it in model using model's 'set' method.
+					console.log('SliderView.updateVal');
+					var val = this.el.slider("option", "value");
+					this.model.set({slidervalue : val});
+				}
+			});
+			
+			// The listener "View" for the model.
+			// Whenever the model's slidervalue attribute changes, this view receives the updated value.
+			var ValueView = Backbone.View.extend({
+				initialize: function(args) {
+					// _.bindAll is provided by underscore.js. 
+					// Due to some javascript quirks, event handlers which are bound receive a 'this' 
+					// value which is "useless" (according to underscore's docs).
+					// _.bindAll is a hack that ensures that 'this' in event handler refers to this view.
+					_.bindAll(this, 'updateValue');
+					
+					
+					console.log('ValueView.initialize');
+					
+					// Bind an event handler to receive updates from the model whenever its
+					// 'slidervalue' attribute changes.
+					this.model.bind('change:slidervalue', this.updateValue);
+					console.log(this);
+				},
+				
+				updateValue: function() {
+					
+					// Get the slider value from model, and display it in textbox.
+					console.log('ValueView.updateValue');
+					
+					// this.model won't work unless "_.bindAll(this, ...)" has been called in initialize
+					var value = this.model.get('slidervalue');
+					console.log(value);
+					$("#sliderVal").val(value);
+				}
+			});
+			
+			// Create the instances
+			var sliderModel = new SliderModel;
+			var sliderView = new SliderView({model : sliderModel});
+			var valView = new ValueView({model : sliderModel});
+		});
+	</script>
+</body>
+</html>
