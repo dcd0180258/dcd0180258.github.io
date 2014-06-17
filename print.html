@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Flat CV</title>	
+		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/print.css">
+		<link rel="stylesheet" href="assets/prettyphoto/css/prettyPhoto.css">
+		<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+		<!--[if lt IE 9]>
+	        <script src="assets/html5shiv.js"></script>
+	    <![endif]-->
+	</head>
+	<body>
+		<div id="page" class="print">
+			<div id="main">
+				<div id="print">
+					<div class="section_header profile_section_header">
+						<script>
+							jQuery(document).ready(function(){
+								function prn() {
+									window.print();
+								}
+								setTimeout(prn, 1000);
+								
+								jQuery('.widget_skills .skills_row .progress').each(function(){
+											var val = jQuery(this).find('.value').text();
+											jQuery(this).css({'width':val});
+								});
+							});
+						</script>
+						<div id="profile_header">
+							<div id="profile_user">
+								<div id="profile_photo">
+									<img src="images/user_photo.jpg" height="150" width="150" alt="Site Author" />
+								</div>
+								<div id="profile_name_area">
+									<div id="profile_name">
+										<h1 id="profile_title"><span class="name"><span class="firstname">John</span><span class="lastname">Johnson</span></span></h1>
+										<h4 id="profile_position">Graphic &amp; Web Designer</h4>
+									</div>
+								</div>
+							</div>
+							<div id="profile_data">
+								<div class="profile_row">
+									<span class="th">Name:</span>
+									<span class="td">John&nbsp;Johnson</span>
+								</div>
+								<div class="profile_row">
+									<span class="th">Date of birth:</span>
+									<span class="td">25/06/90</span>
+								</div>
+								<div class="profile_row">
+									<span class="th">Address:</span>
+									<span class="td">San Francisco, CA 94102, US</span>
+								</div>
+								<div class="profile_row">
+									<span class="th">Phone:</span>
+									<span class="td">+123 456 789 111</span>
+								</div>
+								<div class="profile_row">
+									<span class="th">Email:</span>
+									<span class="td">J.johnson@gmail.com</span>
+								</div>
+								<div class="profile_row">
+									<span class="th">Website:</span>
+									<span class="td">http://www.jjohnson.com</span>
+								</div>
+							</div>
+							<div class="section_body profile_section_body">
+								<div class="proile_body">Stylish, flat, easy customizable and awesome looking wordpress theme with original icons!</div>
+							</div>
+						</div>
+					</div>
+					<div class="section-header">
+						<h2 class="section-title icon2">Employment</h2>
+					</div>
+					<div class="section-content">
+						<article class="post resume_post">
+							<div class="resume_header">
+								<div class="resume_period">
+									<span class="period_from">2005</span>&mdash;
+									<span class="period_to">2007</span>
+								</div>
+								<div class="extra">
+									<h4 class="post_title">commodo consequat</h4>
+									<h5 class="resume_position category2">Web Designer</h5>
+								</div>
+							</div>
+							<div class="resume_content">
+								Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+							</div>
+						</article>
+						<article class="post resume_post">
+							<div class="resume_header">
+								<div class="resume_period">
+									<span class="period_from">2009</span>&mdash;
+									<span class="period_to">2012</span>
+								</div>
+								<div class="extra">
+									<h4 class="post_title">sed do eiusmod</h4>
+									<h5 class="resume_position category2">senior designer</h5>
+								</div>
+							</div>
+							<div class="resume_content">
+								Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</div>
+						</article>
+						<article class="post resume_post">
+							<div class="resume_header">
+								<div class="resume_period">
+									<span class="period_from">2012</span>&mdash;
+									<span class="period_to">present</span>
+								</div>
+								<div class="extra">
+									<h4 class="post_title">commodo consequat</h4>
+									<h5 class="resume_position category2">art director</h5>
+								</div>
+							</div>
+							<div class="resume_content">
+								Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+							</div>
+						</article>
+					</div>
+					<div class="section-header">
+						<h2 class="section-title icon2">Education</h2>
+					</div>
+					<div class="section-content">
+						<article class="post resume_post">
+							<div class="resume_header">
+								<div class="resume_period">
+									<span class="period_from">2002</span>&mdash;
+									<span class="period_to">2005</span>
+								</div>
+								<div class="extra">
+									<h4 class="post_title">1. consectetur adipisicing elit</h4>
+									<h5 class="resume_position category2">Web design</h5>
+								</div>
+							</div>
+							<div class="resume_content">
+								Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							</div>
+						</article>
+						<article class="post resume_post">
+							<div class="resume_header">
+								<div class="resume_period">
+									<span class="period_from">2007</span>&mdash;
+									<span class="period_to">2009</span>
+								</div>
+								<div class="extra">
+									<h4 class="post_title">2. sed do eiusmod </h4>
+									<h5 class="resume_position category2">Graphic design</h5>
+								</div>
+							</div>
+							<div class="resume_content">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							</div>
+						</article>
+					</div>
+					
+					<div class="section-header widgets_section">
+						<h2 class="section-title icon2">
+							<span class="icon"></span>
+							Skills
+						</h2>
+					</div>
+					<div class="skills_sidebar_section">
+						<aside class="widget-even widget widget_skills">
+							<h3 class="widget_title">Programming Skills</h3>
+							<div class="widget_inner">
+								<div class="skills_row odd first">
+									<span class="progressbar">
+										<span class="progress" style="background-color: rgb(124, 175, 0);">
+											<span class="caption_wrap">
+												<span class="caption">Wordpress/</span>
+												<span class="value">90%</span>
+											</span>
+										</span>
+									</span>
+								</div>
+								<div class="skills_row even">
+									<span class="progressbar">
+										<span class="progress" style="background-color: rgb(168, 211, 36);">
+											<span class="caption_wrap">
+												<span class="caption">PHP/</span>
+												<span class="value">80%</span>
+											</span>
+										</span>
+									</span>
+								</div>
+								<div class="skills_row even">
+									<span class="progressbar">
+										<span class="progress" style="background-color: rgb(80, 192, 233);">
+											<span class="caption_wrap">
+												<span class="caption">HTML/</span>
+												<span class="value">99%</span>
+											</span>
+										</span>
+									</span>
+								</div>
+								<div class="skills_row even">
+									<span class="progressbar">
+										<span class="progress" style="background-color: rgb(22, 165, 215);">
+											<span class="caption_wrap">
+												<span class="caption">CSS/</span>
+												<span class="value">90%</span>
+											</span>
+										</span>
+									</span>
+								</div>
+								<div class="skills_row even">
+									<span class="progressbar">
+										<span class="progress" style="background-color: rgb(73, 124, 240);">
+											<span class="caption_wrap">
+												<span class="caption">MySQL/</span>
+												<span class="value">70%</span>
+											</span>
+										</span>
+									</span>
+								</div>
+								<div class="skills_row even">
+									<span class="progressbar">
+										<span class="progress" style="background-color: rgb(152, 118, 252);">
+											<span class="caption_wrap">
+												<span class="caption">JavaScript/</span>
+												<span class="value">60%</span>
+											</span>
+										</span>
+									</span>
+								</div>
+							</div>
+						</aside>
+						<aside class="widget-odd widget widget_skills">
+							<h3 class="widget_title">Graphic Skills</h3>
+							<div class="widget_inner">
+								<div class="skills_row odd first">
+									<span class="progressbar">
+										<span class="progress" style="background-color: rgb(152, 118, 252);">
+											<span class="caption_wrap">
+												<span class="caption">Adobe Photoshop/</span>
+												<span class="value">99%</span>
+											</span>
+										</span>
+									</span>
+								</div>
+								<div class="skills_row even">
+									<span class="progressbar">
+										<span class="progress" style="background-color: rgb(196, 118, 245);">
+											<span class="caption_wrap">
+												<span class="caption">Adobe Illustrator/</span>
+												<span class="value">80%</span>
+											</span>
+										</span>
+									</span>
+								</div>
+								<div class="skills_row even">
+									<span class="progressbar">
+										<span class="progress" style="background-color: rgb(240, 73, 73);">
+											<span class="caption_wrap">
+												<span class="caption">Adobe Indesign/</span>
+												<span class="value">70%</span>
+											</span>
+										</span>
+									</span>
+								</div>
+								<div class="skills_row even">
+									<span class="progressbar">
+										<span class="progress" style="background-color: rgb(255, 143, 69);">
+											<span class="caption_wrap">
+												<span class="caption">Corel Draw/</span>
+												<span class="value">60%</span>
+											</span>
+										</span>
+									</span>
+								</div>
+								<div class="skills_row even">
+									<span class="progressbar">
+										<span class="progress" style="background-color: rgb(249, 196, 54);">
+											<span class="caption_wrap">
+												<span class="caption">3D Max/</span>
+												<span class="value">50%</span>
+											</span>
+										</span>
+									</span>
+								</div>
+							</div>
+						</aside>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>	
