@@ -12,7 +12,7 @@
     	min-height: 125px;
     }
     #profile_name {
-    	width: 250px;
+    	width: 400px;
     }
     #nav_tabs li {
     	width: 125px;
@@ -239,7 +239,7 @@
 		overflow: hidden;
 	}
 	#profile_name {
-		width: 200px;
+		width: 350px;
 		height: 100px;
 	}
 	#profile_name .name {
